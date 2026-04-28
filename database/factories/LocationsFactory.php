@@ -1,0 +1,26 @@
+<?php
+
+namespace Database\Factories;
+
+use App\Models\Locations;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+/**
+ * @extends Factory<Locations>
+ */
+class LocationsFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        return [
+            "name"=>fake()->company(),
+            "Region"=>fake()->city(),
+            "description"=>fake()->paragraph(10)
+        ];
+    }
+}
