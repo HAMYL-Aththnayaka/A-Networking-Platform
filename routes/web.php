@@ -11,4 +11,8 @@ Route::get("/names",[memberController::class,"index"])->name("Yzz.index");
 
 Route::get('/names/create',[memberController::class,"create"])->name('Yzz.create');
 
-Route::get("/names/{id}",[memberController::class,"show"])->name('Yzz.show');
+Route::get("/names/{member}",[memberController::class,"show"])->name('Yzz.show');
+
+Route::post("/names",[memberController::class,"store"])->name('Yzz.store');
+
+Route::delete("/names/{member}",[memberController::class,"destroy"])->name('Yzz.destroy');

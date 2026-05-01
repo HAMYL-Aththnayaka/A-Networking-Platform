@@ -9,17 +9,17 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
-    {
-        Schema::create('yzzs', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->string("name");
-            $table->integer("skill");
-            $table->text("bio");
-            $table->foreignId("locations_id")->constrained()->onDelete('cascade');
-        });
-    }
+  public function up(): void
+{
+    Schema::create('yzzs', function (Blueprint $table) {
+        $table->id();
+        $table->timestamps();
+        $table->string("name");
+        $table->integer("skill");
+        $table->text("bio");
+        $table->foreignId("location_id")->constrained('locations')->onDelete('cascade');
+    });
+}
 
     /**
      * Reverse the migrations.

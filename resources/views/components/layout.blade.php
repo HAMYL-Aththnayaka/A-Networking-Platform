@@ -6,7 +6,13 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-
+    @if(session('success'))
+        <div class="px-4 py-2 bg-green-100">
+            <p class="text-green-700">
+            {{ session('success') }}
+            </p>
+        </div>
+    @endif
     <header>
     <nav>
         <h1>Yasas Network</h1>

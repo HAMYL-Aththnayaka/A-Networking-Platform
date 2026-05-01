@@ -10,4 +10,8 @@ class Locations extends Model
     protected $fillable =['name','Region','description'];
     /** @use HasFactory<\Database\Factories\LocationsFactory> */
     use HasFactory;
+
+    public function members(){
+        return $this->hasMany(Yzz::class);
+    }
 }

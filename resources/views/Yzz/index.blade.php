@@ -5,7 +5,9 @@
             <li>
 
                 <x-card href="{{ route('Yzz.show', $name->id) }}" :highlight="$name->skill > 10">
+               <div>
                     <h3>{{ $name->name }}</h3>
+                    <p>Location: {{ $name->location?->name ?? 'No Location Assigned' }}</p>
                 </x-card>
             </li>
         @endforeach

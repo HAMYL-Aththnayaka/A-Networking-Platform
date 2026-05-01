@@ -23,7 +23,7 @@ class YzzFactory extends Factory
             "name"=>fake()->name(),
             "bio"=>fake()->realText(500),
             "skill"=>fake()->numberBetween(0,100),
-            "locations_id"=> Locations::inRandomOrder()->first()->id,
+            "location_id"=> Locations::inRandomOrder()->first()->id,
         ];
     }
 }
